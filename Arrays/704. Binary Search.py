@@ -13,7 +13,7 @@ class Solution():
 
         while l<=r:
             m=(l+r)//2
-
+            # m=l+(r-l)//2              # for larger value for l and r and avoiding  integer overflow
             if nums[m]>target:
                 r=m-1
             elif nums[m]<target:
