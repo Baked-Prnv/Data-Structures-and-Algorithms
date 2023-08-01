@@ -24,5 +24,5 @@ class Solution():
 arr = [12,39,24,2,7,22, 11, 13, 5, 6]
 sol = Solution()
 ans = sol.insertionSort(arr)
-print(ans)
+print(ans)                                  #[2, 5, 6, 7, 11, 12, 13, 22, 24, 39]
 

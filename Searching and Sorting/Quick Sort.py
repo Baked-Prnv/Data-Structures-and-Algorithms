@@ -33,4 +33,4 @@ class Solution():
 arr = [22,11,88,66,55,77,33,44]
 sol = Solution()
 ans = sol.quickSort(arr,0,len(arr)-1)
-print(arr)
+print(arr)                                  #[11, 22, 33, 44, 55, 66, 77, 88]

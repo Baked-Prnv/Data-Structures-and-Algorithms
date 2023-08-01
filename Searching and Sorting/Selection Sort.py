@@ -25,4 +25,4 @@ class Solution():
 arr = [64, 25, 12, 22, 11]
 sol =Solution()
 ans = sol.selectionSort(arr)
-print(ans)
+print(ans)                      #[11, 12, 22, 25, 64]

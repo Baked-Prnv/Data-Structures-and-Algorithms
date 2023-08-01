@@ -32,4 +32,4 @@ class Solution():
 arr = [64, 34, 25, 12, 99, 22, 11, 90]
 sol = Solution()
 ans = sol.bubbleSort(arr)
-print(arr)
+print(arr)                              #[11, 12, 22, 25, 34, 64, 90, 99]
