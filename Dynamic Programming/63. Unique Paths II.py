@@ -12,6 +12,7 @@ There are two ways to reach the bottom-right corner:
 Input: obstacleGrid = [[0,1],[0,0]]
 Output: 1"""
 
+
 class Solution():
     def uniquePaths(self, obs_grid):
         rows, cols = len(obs_grid), len(obs_grid[0])
@@ -26,5 +27,11 @@ class Solution():
                     dp[c] = dp[c] + dp[c+1]
 
         return dp[0]
-    
-print(Solution().uniquePaths(obs_grid = [[0,0,0],[0,1,0],[0,0,0]]))
+
+
+print(Solution().uniquePaths(obs_grid = [[0,0,0],       #2
+                                         [0,1,0],
+                                         [0,0,0]]))     
+
+print(Solution().uniquePaths(obs_grid = [[0,1],         #1
+                                         [0,0]]))       

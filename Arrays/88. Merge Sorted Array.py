@@ -10,10 +10,11 @@ Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
 The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
 """
 
+
 class Solution():
     def merge(self,nums1,m,nums2,n):
-
         last = m+n-1
+
         while n>0 and m>0:
             if nums1[m-1]<nums2[n-1]:
                 nums1[last] = nums2[n-1]
@@ -30,15 +31,11 @@ class Solution():
 
         return nums1
     
-sol = Solution()
-ans = sol.merge(nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3)
-print(ans)                                                                      #[1, 2, 2, 3, 5, 6]
 
-ans = sol.merge(nums1 = [1], m = 1, nums2 = [], n = 0)
-print(ans)                                                                      #[1]
+print(Solution().merge(nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3))               #[1, 2, 2, 3, 5, 6]
 
-ans = sol.merge(nums1 = [0], m = 0, nums2 = [1], n = 1)
-print(ans)                                                                      #[1]
+print(Solution().merge(nums1 = [1], m = 1, nums2 = [], n = 0))                              #[1]
 
-ans = sol.merge(nums1 = [1,2,3,5,6,7,0,0,0], m = 6, nums2 = [4,5,9], n = 3)
-print(ans)                                                                      #[1, 2, 3, 4, 5, 5, 6, 7, 9]
+print(Solution().merge(nums1 = [0], m = 0, nums2 = [1], n = 1))                             #[1]
+
+print(Solution().merge(nums1 = [1,2,3,5,6,7,0,0,0], m = 6, nums2 = [4,5,9], n = 3))         #[1, 2, 3, 4, 5, 5, 6, 7, 9]

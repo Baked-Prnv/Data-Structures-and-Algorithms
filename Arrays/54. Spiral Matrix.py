@@ -1,13 +1,12 @@
 """54. Spiral Matrix
 Given an m x n matrix, return all elements of the matrix in spiral order.
-Input: matrix = [[1,2,3],
+Input: matrix = [[1,2,3],                       Output: [1,2,3,6,9,8,7,4,5]
                  [4,5,6],
                  [7,8,9]]
-Output: [1,2,3,6,9,8,7,4,5]
-Input: matrix = [[1,2,3,4],
+Input: matrix = [[1,2,3,4],                     Output: [1,2,3,4,8,12,11,10,9,5,6,7]
                  [5,6,7,8],
-                 [9,10,11,12]]
-Output: [1,2,3,4,8,12,11,10,9,5,6,7]"""
+                 [9,10,11,12]]"""
+
 
 class Solution():
     def spiral(self, matrix):
@@ -34,13 +33,11 @@ class Solution():
             left+=1
         return res
 
-sol = Solution()
-ans = sol.spiral(matrix = [[1,2,3],
-                           [4,5,6],
-                           [7,8,9]])
-print(ans)                              #[1, 2, 3, 6, 9, 8, 7, 4, 5]
 
-ans = sol.spiral(matrix = [[1,2,3,4],
-                           [5,6,7,8],
-                          [9,10,11,12]])
-print(ans)                              #[1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
+print(Solution().spiral(matrix = [[1,2,3],              #[1, 2, 3, 6, 9, 8, 7, 4, 5]
+                                  [4,5,6],
+                                  [7,8,9]]))
+                        
+print(Solution().spiral(matrix = [[1,2,3,4],            #[1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
+                                  [5,6,7,8],
+                                 [9,10,11,12]]))

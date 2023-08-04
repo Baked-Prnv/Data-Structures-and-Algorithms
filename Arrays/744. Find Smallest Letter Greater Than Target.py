@@ -11,6 +11,7 @@ Input: letters = ["x","x","y","y"], target = "z"
 Output: "x"
 Explanation: There are no characters in letters that is lexicographically greater than 'z' so we return letters[0]."""
 
+
 class Solution():
     def greaterChar(self,letters, target):
 
@@ -27,19 +28,9 @@ class Solution():
                 
         return letters[l]
     
-letters = ["x","x","y","y"]
-target = "z"
-sol =Solution()
-ans = sol.greaterChar(letters,target)
-print(ans)                              #x
 
-letters = ["c","f","j"]
-target = "c"
-ans = sol.greaterChar(letters,target)
-print(ans)                              #f
+print(Solution().greaterChar(letters = ["x","x","y","y"],target = "z"))             #x
 
+print(Solution().greaterChar(letters = ["c","f","j"],target = "c"))                 #f
 
-letters = ["c","f","j"]
-target = "a"
-ans = sol.greaterChar(letters,target)
-print(ans)                              #c
+print(Solution().greaterChar(letters = ["c","f","j"],target = "a"))                 #c
