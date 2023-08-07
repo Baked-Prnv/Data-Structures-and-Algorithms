@@ -8,6 +8,7 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 ---------------------------------------------------------------------------------------------------------------------------
 using hashmap with hash function such hashmap[nums[i]]=i and by getting the compliment from the target and checking if it is present in hashmap"""
 
+
 class Solution():
     def twoSum(self, nums, target):
         hashmap = {} 
@@ -20,18 +21,23 @@ class Solution():
             
             hashmap[nums[i]] = i
 
-nums = [2,7,11,15]
-target = 9
-sol = Solution()
-ans = sol.twoSum(nums, target)
-print(ans)
+    def twoPointer(self, nums, target):
+        l,r = 0,len(nums)-1
+        nums.sort()
+        
+        while l<r :
+            if nums[l]+nums[r] >target:
+                r-=1
+            elif nums[l]+nums[r]<target:
+                l+=1
+            else:
+                return [l,r]
 
-nums = [3,2,4]
-target = 6
-ans = sol.twoSum(nums, target)
-print(ans)
 
-nums = [3,3]
-target = 6
-ans = sol.twoSum(nums, target)
-print(ans)
+print(Solution().twoSum(nums = [2,7,11,15],target = 9))             #[0, 1]
+
+print(Solution().twoPointer(nums = [2,7,11,15],target = 9))         #[0, 1]
+
+print(Solution().twoSum(nums = [3,2,4],target = 6))                 #[1, 2]
+
+print(Solution().twoSum(nums = [3,3],target = 6))                   #[0, 1]
