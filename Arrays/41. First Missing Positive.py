@@ -21,7 +21,7 @@ class Solution():
                 return 2
             return 1
     
-    def firstMissingPositive2(self,nums):                           #using sorting alogorithm
+    def firstMissingPositive2(self,nums):                           #using sorting alogorithm so O(nlogn)
         nums.sort()
         smallest_missing=1
         
